@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>QR code generator and Reader</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/generator.css">
+    </head>
+    <body>
+       <div class="wrapper">
+            <header><center><h1>QR code generator and reader</h1></center></header>
+
+            <div class="form">
+                <button id="gqc">Generate QR Code</button>
+                <button id="rqc">Read QR Code</button>
+                <div class="footer"><a class="footer-link" target="blank" href=""></a>By Theofanakis</div>
+            </div>
+       </div>
+        
+    </body>
+</html>
+
+<script>
+    let generateQrCode = document.getElementById("gqc");
+    let readQrCode = document.getElementById("rqc");
+
+    generateQrCode.addEventListener("click", ()=> {
+        window.location.href = "qr-code-generator.html";
+     })
+
+    readQrCode.addEventListener("click", ()=> {
+        window.location.href = "qr-code-reader.html";
+     })
+</script>

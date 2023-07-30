@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/read.css">
+    <title>QR Code Reader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body>
+    
+<div class="wrapper">
+    <button class="back">Back</button>
+    <form action="g" class="">
+        <input type="file" hidden>
+        <img src="g" alt="qr-code">
+
+        <div class="content">
+            <i class="fas fa-cloud-upload"></i>
+            <p>Upload QR Code to read</p>
+        </div>
+    </form>
+    <div class="footer"><a class="footer-link" target="blank" href=""></a>By Theofanakis</div>
+
+    <div class="details">
+        <textarea spellcheck="false" disabled></textarea>
+        <div class="buttons">
+            <button class="closeForm">Close</button>
+            <button class="copy">Copy Text</button>
+        </div>
+    </div>
+</div>
+
+     <!-- COPY THIS  -->
+     <!-- The Modal -->
+     <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="modalText"></p>
+    </div></div>
+    <!-- END OF COPY  -->
+   
+   <script src="js/reader.js"></script> 
+</body>
+</html>
+
+<script>
+        let back = document.querySelector(".back");
+        back.addEventListener("click", ()=> {
+            window.location.href = "index.html";
+        })
+
+        modalContent = document.querySelector(".modal-content");
+    modalText = document.querySelector("#modalText");
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+</script>
+
